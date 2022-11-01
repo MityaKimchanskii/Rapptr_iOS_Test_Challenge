@@ -8,22 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		3BB2EF4A2910446A0074133D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2EF492910446A0074133D /* AppDelegate.swift */; };
-		3BB2EF4C2910446A0074133D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2EF4B2910446A0074133D /* SceneDelegate.swift */; };
-		3BB2EF4E2910446A0074133D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2EF4D2910446A0074133D /* ViewController.swift */; };
-		3BB2EF512910446A0074133D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB2EF4F2910446A0074133D /* Main.storyboard */; };
+		3BB2EF4E2910446A0074133D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2EF4D2910446A0074133D /* MenuViewController.swift */; };
 		3BB2EF532910446B0074133D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB2EF522910446B0074133D /* Assets.xcassets */; };
 		3BB2EF562910446B0074133D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB2EF542910446B0074133D /* LaunchScreen.storyboard */; };
+		3BB2EF5F291047FF0074133D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2EF5E291047FF0074133D /* ChatViewController.swift */; };
+		3BB2EF61291048160074133D /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2EF60291048160074133D /* AnimationViewController.swift */; };
+		3BB2EF63291048590074133D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2EF62291048590074133D /* LoginViewController.swift */; };
+		3BB2EF682910489F0074133D /* ChatClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2EF662910489F0074133D /* ChatClient.swift */; };
+		3BB2EF692910489F0074133D /* LoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2EF672910489F0074133D /* LoginClient.swift */; };
+		3BB2EF6D291048E40074133D /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2EF6C291048E40074133D /* ChatTableViewCell.swift */; };
+		3BB2EF722910490C0074133D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2EF712910490C0074133D /* Message.swift */; };
+		3BB2EF75291062D90074133D /* MenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2EF74291062D90074133D /* MenuButtonView.swift */; };
+		3BC0FE0F2910A3A9004FD395 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC0FE0E2910A3A9004FD395 /* TextFieldView.swift */; };
+		3BC0FE122910B87A004FD395 /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC0FE112910B87A004FD395 /* Factories.swift */; };
+		3BC0FE142910CA28004FD395 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC0FE132910CA28004FD395 /* NetworkError.swift */; };
+		3BC0FE172910E1BF004FD395 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC0FE162910E1BF004FD395 /* BubbleView.swift */; };
+		3BC0FE1A2910E821004FD395 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3BC0FE192910E821004FD395 /* SDWebImage */; };
+		3BC0FE1C2910E821004FD395 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3BC0FE1B2910E821004FD395 /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3BB2EF462910446A0074133D /* Rapptr iOS Test Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rapptr iOS Test Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB2EF492910446A0074133D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3BB2EF4B2910446A0074133D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3BB2EF4D2910446A0074133D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3BB2EF502910446A0074133D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BB2EF4D2910446A0074133D /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3BB2EF522910446B0074133D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BB2EF552910446B0074133D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BB2EF572910446B0074133D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BB2EF5E291047FF0074133D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		3BB2EF60291048160074133D /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		3BB2EF62291048590074133D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3BB2EF662910489F0074133D /* ChatClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatClient.swift; sourceTree = "<group>"; };
+		3BB2EF672910489F0074133D /* LoginClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginClient.swift; sourceTree = "<group>"; };
+		3BB2EF6C291048E40074133D /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		3BB2EF712910490C0074133D /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3BB2EF74291062D90074133D /* MenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonView.swift; sourceTree = "<group>"; };
+		3BC0FE0E2910A3A9004FD395 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		3BC0FE112910B87A004FD395 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
+		3BC0FE132910CA28004FD395 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		3BC0FE162910E1BF004FD395 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BC0FE1C2910E821004FD395 /* SDWebImageMapKit in Frameworks */,
+				3BC0FE1A2910E821004FD395 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +80,105 @@
 		3BB2EF482910446A0074133D /* Rapptr iOS Test Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				3BC0FE102910B85F004FD395 /* Extensions+Files */,
+				3BB2EF6A291048C20074133D /* Views */,
+				3BB2EF652910487D0074133D /* Clients */,
+				3BB2EF70291049000074133D /* Models */,
+				3BB2EF642910486E0074133D /* ViewControllers */,
+				3BB2EF5D291045A30074133D /* Resources */,
+			);
+			path = "Rapptr iOS Test Challenge";
+			sourceTree = "<group>";
+		};
+		3BB2EF5D291045A30074133D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				3BB2EF492910446A0074133D /* AppDelegate.swift */,
-				3BB2EF4B2910446A0074133D /* SceneDelegate.swift */,
-				3BB2EF4D2910446A0074133D /* ViewController.swift */,
-				3BB2EF4F2910446A0074133D /* Main.storyboard */,
 				3BB2EF522910446B0074133D /* Assets.xcassets */,
 				3BB2EF542910446B0074133D /* LaunchScreen.storyboard */,
 				3BB2EF572910446B0074133D /* Info.plist */,
 			);
-			path = "Rapptr iOS Test Challenge";
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3BB2EF642910486E0074133D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BB2EF60291048160074133D /* AnimationViewController.swift */,
+				3BB2EF62291048590074133D /* LoginViewController.swift */,
+				3BB2EF4D2910446A0074133D /* MenuViewController.swift */,
+				3BB2EF5E291047FF0074133D /* ChatViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3BB2EF652910487D0074133D /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				3BB2EF662910489F0074133D /* ChatClient.swift */,
+				3BB2EF672910489F0074133D /* LoginClient.swift */,
+				3BC0FE132910CA28004FD395 /* NetworkError.swift */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
+		3BB2EF6A291048C20074133D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3BC0FE152910D893004FD395 /* BubleView */,
+				3BC0FE0D2910A38E004FD395 /* TextFieldView */,
+				3BB2EF73291061310074133D /* ButtonView */,
+				3BB2EF6B291048D40074133D /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3BB2EF6B291048D40074133D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3BB2EF6C291048E40074133D /* ChatTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		3BB2EF70291049000074133D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3BB2EF712910490C0074133D /* Message.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3BB2EF73291061310074133D /* ButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				3BB2EF74291062D90074133D /* MenuButtonView.swift */,
+			);
+			name = ButtonView;
+			sourceTree = "<group>";
+		};
+		3BC0FE0D2910A38E004FD395 /* TextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				3BC0FE0E2910A3A9004FD395 /* TextFieldView.swift */,
+			);
+			name = TextFieldView;
+			sourceTree = "<group>";
+		};
+		3BC0FE102910B85F004FD395 /* Extensions+Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BC0FE112910B87A004FD395 /* Factories.swift */,
+			);
+			name = "Extensions+Files";
+			sourceTree = "<group>";
+		};
+		3BC0FE152910D893004FD395 /* BubleView */ = {
+			isa = PBXGroup;
+			children = (
+				3BC0FE162910E1BF004FD395 /* BubbleView.swift */,
+			);
+			name = BubleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +197,10 @@
 			dependencies = (
 			);
 			name = "Rapptr iOS Test Challenge";
+			packageProductDependencies = (
+				3BC0FE192910E821004FD395 /* SDWebImage */,
+				3BC0FE1B2910E821004FD395 /* SDWebImageMapKit */,
+			);
 			productName = "Rapptr iOS Test Challenge";
 			productReference = 3BB2EF462910446A0074133D /* Rapptr iOS Test Challenge.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 3BB2EF3D2910446A0074133D;
+			packageReferences = (
+				3BC0FE182910E821004FD395 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 3BB2EF472910446A0074133D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +248,6 @@
 			files = (
 				3BB2EF562910446B0074133D /* LaunchScreen.storyboard in Resources */,
 				3BB2EF532910446B0074133D /* Assets.xcassets in Resources */,
-				3BB2EF512910446A0074133D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +258,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BB2EF4E2910446A0074133D /* ViewController.swift in Sources */,
+				3BB2EF682910489F0074133D /* ChatClient.swift in Sources */,
+				3BC0FE172910E1BF004FD395 /* BubbleView.swift in Sources */,
+				3BB2EF4E2910446A0074133D /* MenuViewController.swift in Sources */,
+				3BB2EF75291062D90074133D /* MenuButtonView.swift in Sources */,
+				3BC0FE0F2910A3A9004FD395 /* TextFieldView.swift in Sources */,
+				3BB2EF5F291047FF0074133D /* ChatViewController.swift in Sources */,
+				3BB2EF722910490C0074133D /* Message.swift in Sources */,
+				3BC0FE122910B87A004FD395 /* Factories.swift in Sources */,
 				3BB2EF4A2910446A0074133D /* AppDelegate.swift in Sources */,
-				3BB2EF4C2910446A0074133D /* SceneDelegate.swift in Sources */,
+				3BB2EF692910489F0074133D /* LoginClient.swift in Sources */,
+				3BB2EF6D291048E40074133D /* ChatTableViewCell.swift in Sources */,
+				3BC0FE142910CA28004FD395 /* NetworkError.swift in Sources */,
+				3BB2EF63291048590074133D /* LoginViewController.swift in Sources */,
+				3BB2EF61291048160074133D /* AnimationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3BB2EF4F2910446A0074133D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3BB2EF502910446A0074133D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3BB2EF542910446B0074133D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,9 +415,9 @@
 				INFOPLIST_FILE = "Rapptr iOS Test Challenge/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,9 +443,9 @@
 				INFOPLIST_FILE = "Rapptr iOS Test Challenge/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +481,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3BC0FE182910E821004FD395 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3BC0FE192910E821004FD395 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BC0FE182910E821004FD395 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		3BC0FE1B2910E821004FD395 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BC0FE182910E821004FD395 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3BB2EF3E2910446A0074133D /* Project object */;
 }
