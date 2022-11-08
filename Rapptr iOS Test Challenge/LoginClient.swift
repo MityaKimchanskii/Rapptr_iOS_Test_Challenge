@@ -45,8 +45,8 @@ class LoginClient {
             guard let data = data else { return completion(.failure(.noData)) }
 
             do {
-                let jsonData = try JSONDecoder().decode(String.self, from: data)
-                let message = jsonData
+                let jsonData = try JSONDecoder().decode(LoginResponse.self, from: data)
+                let message = jsonData.message
                 print("Json message:", message)
 
                 let diff = CFAbsoluteTimeGetCurrent() - start
@@ -57,8 +57,6 @@ class LoginClient {
 
                 completion(.success("\(diffFormated) ===== \(message)"))
             } catch {
-                print("Request tooktook ms")
-
                 completion(.failure(.unableToDecode))
             }
         }.resume()
