@@ -12,7 +12,6 @@ enum NetworkError: LocalizedError {
     case thrownError(Error)
     case noData
     case unableToDecode
-    case invalidParameters
     
     var errorDescription: String? {
         switch self {
@@ -24,8 +23,6 @@ enum NetworkError: LocalizedError {
             return "The server responded with no data."
         case .unableToDecode:
             return "There unable to decode the data."
-        case .invalidParameters:
-            return "Invalid Parameters"
         }
     }
 }

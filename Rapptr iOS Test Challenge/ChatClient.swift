@@ -15,7 +15,8 @@ class ChatClient {
     let baseURL = URL(string: "https://dev.rapptrlabs.com/Tests/scripts/chat_log.php")
     
     func fetchChatData(completion: @escaping (Result<[Message], NetworkError>) -> Void) {
-        guard let baseURL = baseURL else { return }
+        
+        guard let baseURL = baseURL else { return completion(.failure(.invalidURL)) }
         
         URLSession.shared.dataTask(with: baseURL) { (data, response, error) in
             if let error = error {

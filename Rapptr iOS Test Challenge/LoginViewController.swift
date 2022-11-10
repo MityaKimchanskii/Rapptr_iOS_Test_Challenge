@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     private lazy var emailView = TextFieldView(frame: .zero, textField: emailTextField)
     private let passwordTextField = UITextField()
     private lazy var passwordView = TextFieldView(frame: .zero, textField: passwordTextField)
-
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +68,7 @@ extension LoginViewController {
         // passwordView
         passwordView.backgroundColor = UIColor(named: "view")
         passwordView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         // loginButton
         loginButton.setTitle("LOGIN", for: .normal)
         loginButton.backgroundColor = UIColor(named: "button")
@@ -83,7 +83,7 @@ extension LoginViewController {
         view.addSubview(emailView)
         view.addSubview(passwordView)
         view.addSubview(loginButton)
-
+        
         NSLayoutConstraint.activate([
             // imageView
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -111,32 +111,29 @@ extension LoginViewController {
     
     private func login() {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
-        LoginClient.shared.login(email: email, password: password) { result in
-            switch result {
-            case .success(let success):
-                print(success)
+        LoginClient.shared.login(email: email, password: password) { response, message in
+            if message != "Invalid Parameters" {
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Success", message: "Welcome to Rapptr!", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Welcome to Rapptr!", message: "\(message)\n The API call took: \(response) ms", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
                         self.dismiss(animated: true)
                     }))
                     self.present(alert, animated: true)
                 }
-            case .failure(let error):
+            } else {
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Failure", message: "Please, try again later.", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Failed to access", message: "Please check your email and password.\n The API call took: \(response) ms", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-                        self.dismiss(animated: true)
+//                        self.dismiss(animated: true)
                     }))
                     self.present(alert, animated: true)
                 }
-                print(error)
-                print(error.localizedDescription)
             }
+        } error: { error in
+            print(NetworkError.thrownError(error!))
         }
     }
 }
-
 // MARK: - Extension TextField
 extension LoginViewController {
     func hideKeyboardWhenTappedAround() {
