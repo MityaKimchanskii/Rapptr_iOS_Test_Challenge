@@ -111,38 +111,53 @@ extension LoginViewController {
     
     private func login() {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
-        LoginClient.shared.login(email: email, password: password) { response, message in
-            if message != "Invalid Parameters" {
+        LoginClient.shared.login(email: email, password: password) { [weak self] result in
+            switch result {
+            case .success(let response):
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Welcome to Rapptr!", message: "\(message)\n The API call took: \(response) ms", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-                        self.dismiss(animated: true)
-                    }))
-                    self.present(alert, animated: true)
+                    if response.message != "Invalid Parameters" {
+                        let alert = UIAlertController(title: "Welcome to Rapptr!",
+                                                      message: """
+                                                                Responce: \(response.code).\n
+                                                                Message: \(response.message).\n
+                                                                The API call took: \(LoginClient.shared.apiCallTime ?? "0") ms.
+                                                               """,
+                                                      preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                            self?.dismiss(animated: true)
+                        }))
+                        self?.present(alert, animated: true)
+                    } else {
+                        let alert = UIAlertController(title: "Failed to access",
+                                                      message: """
+                                                                Please check your email and password.\n
+                                                                Responce: \(response.code).\n
+                                                                Message: \(response.message).\n
+                                                                The API call took: \(LoginClient.shared.apiCallTime ?? "0") ms.
+                                                               """,
+                                                      preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                            //                        self.dismiss(animated: true)
+                        }))
+                        self?.present(alert, animated: true)
+                    }
                 }
-            } else {
-                DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Failed to access", message: "Please check your email and password.\n The API call took: \(response) ms", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-//                        self.dismiss(animated: true)
-                    }))
-                    self.present(alert, animated: true)
-                }
+            case .failure(let error):
+                print(error)
+                print(error.localizedDescription)
             }
-        } error: { error in
-            print(NetworkError.thrownError(error!))
         }
     }
 }
 // MARK: - Extension TextField
 extension LoginViewController {
-    func hideKeyboardWhenTappedAround() {
+    private func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
     
-    @objc func dismissKeyboard() {
+    @objc private func dismissKeyboard() {
         view.endEditing(true)
     }
 }
