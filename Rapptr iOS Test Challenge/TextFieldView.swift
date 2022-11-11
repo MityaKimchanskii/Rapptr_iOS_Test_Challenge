@@ -9,7 +9,7 @@ import UIKit
 
 class TextFieldView: UIView {
     
-    var textField = UITextField()
+    private var textField = UITextField()
     
     init(frame: CGRect, textField: UITextField) {
         self.textField = textField
@@ -25,7 +25,7 @@ class TextFieldView: UIView {
 }
 
 extension TextFieldView {
-    func style() {
+    private func style() {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = UIColor(named: "view")
         alpha = 0.5
@@ -36,7 +36,7 @@ extension TextFieldView {
         textField.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func layout() {
+    private func layout() {
         addSubview(textField)
         
         NSLayoutConstraint.activate([

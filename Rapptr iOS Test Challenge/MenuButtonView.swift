@@ -9,10 +9,10 @@ import UIKit
 
 class MenuButtonView: UIView {
     
-    var button = UIButton()
-    let imageView = UIImageView()
-    let title: String
-    let imageName: String
+    private var button = UIButton()
+    private let imageView = UIImageView()
+    private let title: String
+    private let imageName: String
     
     init(frame: CGRect, title: String, imageName: String, button: UIButton) {
         self.title = title
@@ -30,7 +30,7 @@ class MenuButtonView: UIView {
 }
 
 extension MenuButtonView {
-    func style() {
+    private func style() {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = UIColor(named: "view")
         alpha = 0.8
@@ -47,7 +47,7 @@ extension MenuButtonView {
         button.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func layout() {
+    private func layout() {
         addSubview(imageView)
         addSubview(button)
         

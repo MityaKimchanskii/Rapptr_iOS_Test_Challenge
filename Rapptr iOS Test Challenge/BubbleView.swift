@@ -9,8 +9,8 @@ import UIKit
 
 class BubbleView: UIView {
     
-    var label = UILabel()
-    let text: String
+    private var label = UILabel()
+    private let text: String
     
     init(frame: CGRect, label: UILabel, text: String) {
         self.label = label
@@ -27,7 +27,7 @@ class BubbleView: UIView {
 }
 
 extension BubbleView {
-    func style() {
+    private func style() {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .white
         layer.cornerRadius = 8
@@ -42,7 +42,7 @@ extension BubbleView {
         label.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func layout() {
+    private func layout() {
         addSubview(label)
         
         NSLayoutConstraint.activate([
