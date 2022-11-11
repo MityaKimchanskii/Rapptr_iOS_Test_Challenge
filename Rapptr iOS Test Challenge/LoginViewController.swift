@@ -118,7 +118,7 @@ extension LoginViewController {
                     if response.message != "Invalid Parameters" {
                         let alert = UIAlertController(title: "Welcome to Rapptr!",
                                                       message: """
-                                                                Responce: \(response.code).\n
+                                                                Response: \(response.code).\n
                                                                 Message: \(response.message).\n
                                                                 The API call took: \(LoginClient.shared.apiCallTime ?? "0") ms.
                                                                """,
@@ -131,7 +131,7 @@ extension LoginViewController {
                         let alert = UIAlertController(title: "Failed to access",
                                                       message: """
                                                                 Please check your email and password.\n
-                                                                Responce: \(response.code).\n
+                                                                Response: \(response.code).\n
                                                                 Message: \(response.message).\n
                                                                 The API call took: \(LoginClient.shared.apiCallTime ?? "0") ms.
                                                                """,

@@ -20,10 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = UIColor(named: "header")
-        appearance.titleTextAttributes = [.foregroundColor: UIColor(named: "headerText") ?? .white]
-        appearance.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .semibold)]
+        appearance.titleTextAttributes = [
+            .foregroundColor: UIColor(named: "headerText") ?? .white,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .semibold)
+        ]
     
-        
         navigationController.navigationBar.standardAppearance = appearance
         navigationController.navigationBar.compactAppearance = appearance
         navigationController.navigationBar.scrollEdgeAppearance = appearance

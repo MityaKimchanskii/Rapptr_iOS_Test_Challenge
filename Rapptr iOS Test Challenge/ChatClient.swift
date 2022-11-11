@@ -12,10 +12,9 @@ class ChatClient {
     static let shared = ChatClient()
     private init() {}
     
-    let baseURL = URL(string: "https://dev.rapptrlabs.com/Tests/scripts/chat_log.php")
-    
     func fetchChatData(completion: @escaping (Result<[Message], NetworkError>) -> Void) {
         
+        let baseURL = URL(string: "https://dev.rapptrlabs.com/Tests/scripts/chat_log.php")
         guard let baseURL = baseURL else { return completion(.failure(.invalidURL)) }
         
         URLSession.shared.dataTask(with: baseURL) { (data, response, error) in
@@ -23,10 +22,8 @@ class ChatClient {
                 return completion(.failure(.thrownError(error)))
             }
             
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode) else {
-                print("Response: \(String(describing: response))")
-                return
+            if let response = response {
+                print("HTTP response: \(response)")
             }
             
             guard let data = data else { return completion(.failure(.noData)) }

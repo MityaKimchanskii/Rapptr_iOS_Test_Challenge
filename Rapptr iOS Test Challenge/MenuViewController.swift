@@ -25,9 +25,7 @@ class MenuViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Coding Tasks"
-        
         style()
         layout()
         chatButtonAction()
@@ -72,10 +70,6 @@ extension MenuViewController {
     }
     
     private func style() {
-        chatButtonView.translatesAutoresizingMaskIntoConstraints = false
-        loginButtonView.translatesAutoresizingMaskIntoConstraints = false
-        animationButtonView.translatesAutoresizingMaskIntoConstraints = false
-        
         stackView.axis = .vertical
         stackView.spacing = 24
         stackView.translatesAutoresizingMaskIntoConstraints = false
